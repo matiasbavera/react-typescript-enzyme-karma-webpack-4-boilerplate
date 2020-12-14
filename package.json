@@ -1,0 +1,58 @@
+{
+  "name": "react-typescript-enzyme-karma-webpack-4-boilerplate",
+  "version": "1.0.0",
+  "description": "Boilerplate project for setting up Typescript 4, React 16, Webpack 4, Karma,Jasmine, Enzyme for tests.",
+  "main": "dist/bundle.js",
+  "repository": {
+    "url": "https://github.com/matiasbavera/react-typescript-enzyme-karma-webpack-4-boilerplate",
+    "type": "git"
+  },
+  "author": "Matias <matiasbavera@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/enzyme-adapter-react-16": "^1.0.6",
+    "awesome-typescript-loader": "^5.2.1",
+    "commitizen": "^2.8.6",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.5",
+    "http-server": "^0.9.0",
+    "jasmine": "^3.6.3",
+    "jasmine-core": "^2.5.2",
+    "karma": "^5.2.3",
+    "karma-chrome-launcher": "^3.1.0",
+    "karma-coverage": "^1.1.1",
+    "karma-jasmine": "^4.0.1",
+    "karma-remap-istanbul": "^0.6.0",
+    "karma-sourcemap-loader": "^0.3.8",
+    "karma-sourcemap-writer": "^0.1.2",
+    "karma-spec-reporter": "^0.0.32",
+    "karma-webpack": "^4.0.2",
+    "rimraf": "^3.0.2",
+    "source-map-loader": "^1.1.3",
+    "ts-helpers": "^1.1.2",
+    "typescript": "^4.1.3",
+    "webpack": "4.44.2",
+    "webpack-cli": "^3.3.2",
+    "webpack-config-utils": "^2.1.0",
+    "webpack-dev-server": "^3.5.1"
+  },
+  "dependencies": {
+    "@types/enzyme": "^3.10.8",
+    "@types/jasmine": "^2.5.38",
+    "@types/karma": "^5.0.1",
+    "@types/react": "^17.0.0",
+    "@types/react-dom": "^17.0.0",
+    "istanbul-instrumenter-loader": "^1.0.0",
+    "react": "^16.4.0",
+    "react-dom": "^16.4.0"
+  },
+  "scripts": {
+    "prebuild": "rimraf dist",
+    "build": "webpack --env.prod -p",
+    "prebuild:dev": "rimraf dist",
+    "build:dev": "webpack --env.dev",
+    "start": "http-server",
+    "dev": "webpack-dev-server --env.dev",
+    "test": "./node_modules/karma/bin/karma start karma.conf.js"
+  }
+}
