@@ -6,9 +6,8 @@ module.exports = config => {
         frameworks: ['jasmine'],
 
         files: [
-            { pattern: 'test/**/*.tsx' },
+            { pattern: 'test/**/*.+(tsx|ts)' },
             { pattern: 'test/**/*.json', included: false, served: true},
-            { pattern: 'test/*test.ts', watched: false }
         ],
 
         preprocessors: {
@@ -34,17 +33,6 @@ module.exports = config => {
                 colors: true
             }
         },
-
-        plugins: [
-            'karma-webpack',
-            'karma-jasmine',
-            'karma-sourcemap-writer',
-            'karma-sourcemap-loader',
-            'karma-coverage',
-            'karma-remap-istanbul',
-            'karma-spec-reporter',
-            'karma-chrome-launcher',
-        ],
 
         reporters: ['progress', 'coverage'],
         port: 9876,
